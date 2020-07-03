@@ -1,0 +1,18 @@
+{
+	"name": "Project101_AzureBlobStorage_TST",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_tst",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "project101-tst-kv-secret"
+			}
+		}
+	}
+}

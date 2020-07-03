@@ -1,0 +1,45 @@
+{
+	"name": "DS_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Project101_AzureBlobStorage_TST",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SourceFile.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "TeamCode",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "NickName",
+				"type": "String"
+			},
+			{
+				"name": "ConferenceCode",
+				"type": "String"
+			},
+			{
+				"name": "DivisionName",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
